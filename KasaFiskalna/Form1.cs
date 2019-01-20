@@ -21,6 +21,7 @@ namespace KasaFiskalna
         {
             InitializeComponent();
             Clean();
+            
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -75,20 +76,25 @@ namespace KasaFiskalna
             test = false;
         }
 
+        private void richTextBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
         private void Calculate()
         {
                 try
                 {
                     switch (pozycja)
                     {
-                        case 0: { if (b1click == true) { b1click = false; b2click = false; ceny[pozycja] = Convert.ToDouble(textBox2.Text); label4.Text = textBox1.Text + " - " + textBox2.Text; pozycja++; button2.Enabled = true; } break; }
-                        case 1: { if (b1click == true) { b1click = false; ceny[pozycja] = Convert.ToDouble(textBox2.Text); label5.Text = textBox1.Text + " - " + textBox2.Text; pozycja++;  } if (b2click == true) { b2click = false; label4.Text = ""; pozycja--; button2.Enabled = false; } break; }
-                        case 2: { if (b1click == true) { b1click = false; ceny[pozycja] = Convert.ToDouble(textBox2.Text); label6.Text = textBox1.Text + " - " + textBox2.Text; pozycja++;  } if (b2click == true) { b2click = false; label5.Text = ""; pozycja--;  } break; }
-                        case 3: { if (b1click == true) { b1click = false; ceny[pozycja] = Convert.ToDouble(textBox2.Text); label7.Text = textBox1.Text + " - " + textBox2.Text; pozycja++;  } if (b2click == true) { b2click = false; label6.Text = ""; pozycja--;  } break; }
-                        case 4: { if (b1click == true) { b1click = false; ceny[pozycja] = Convert.ToDouble(textBox2.Text); label8.Text = textBox1.Text + " - " + textBox2.Text; pozycja++;  } if (b2click == true) { b2click = false; label7.Text = ""; pozycja--;  } break; }
-                        case 5: { if (b1click == true) { b1click = false; ceny[pozycja] = Convert.ToDouble(textBox2.Text); label9.Text = textBox1.Text + " - " + textBox2.Text; pozycja++;  } if (b2click == true) { b2click = false; label8.Text = ""; pozycja--;  } break; }
-                        case 6: { if (b1click == true) { b1click = false; ceny[pozycja] = Convert.ToDouble(textBox2.Text); label10.Text = textBox1.Text + " - " + textBox2.Text; pozycja++;  } if (b2click == true) { b2click = false; label9.Text = ""; pozycja--;  } break; }
-                        case 7: { if (b1click == true) { b1click = false; ceny[pozycja] = Convert.ToDouble(textBox2.Text); label11.Text = textBox1.Text + " - " + textBox2.Text; pozycja++; button1.Enabled = false; } if (b2click == true) { b2click = false; label10.Text = ""; pozycja--;  } break; }
+                        case 0: { if (b1click == true) { b1click = false; b2click = false; ceny[pozycja] = Convert.ToDouble(textBox2.Text) * Convert.ToDouble(textBox4.Text); label4.Text = textBox1.Text + " - " + ceny[pozycja]; pozycja++; button2.Enabled = true; } break; }
+                        case 1: { if (b1click == true) { b1click = false; ceny[pozycja] = Convert.ToDouble(textBox2.Text) * Convert.ToDouble(textBox4.Text); label5.Text = textBox1.Text + " - " + ceny[pozycja]; pozycja++;  } if (b2click == true) { b2click = false; label4.Text = ""; pozycja--; button2.Enabled = false; } break; }
+                        case 2: { if (b1click == true) { b1click = false; ceny[pozycja] = Convert.ToDouble(textBox2.Text) * Convert.ToDouble(textBox4.Text); label6.Text = textBox1.Text + " - " + textBox2.Text; pozycja++;  } if (b2click == true) { b2click = false; label5.Text = ""; pozycja--;  } break; }
+                        case 3: { if (b1click == true) { b1click = false; ceny[pozycja] = Convert.ToDouble(textBox2.Text) * Convert.ToDouble(textBox4.Text); label7.Text = textBox1.Text + " - " + textBox2.Text; pozycja++;  } if (b2click == true) { b2click = false; label6.Text = ""; pozycja--;  } break; }
+                        case 4: { if (b1click == true) { b1click = false; ceny[pozycja] = Convert.ToDouble(textBox2.Text) * Convert.ToDouble(textBox4.Text); label8.Text = textBox1.Text + " - " + textBox2.Text; pozycja++;  } if (b2click == true) { b2click = false; label7.Text = ""; pozycja--;  } break; }
+                        case 5: { if (b1click == true) { b1click = false; ceny[pozycja] = Convert.ToDouble(textBox2.Text) * Convert.ToDouble(textBox4.Text); label9.Text = textBox1.Text + " - " + textBox2.Text; pozycja++;  } if (b2click == true) { b2click = false; label8.Text = ""; pozycja--;  } break; }
+                        case 6: { if (b1click == true) { b1click = false; ceny[pozycja] = Convert.ToDouble(textBox2.Text) * Convert.ToDouble(textBox4.Text); label10.Text = textBox1.Text + " - " + textBox2.Text; pozycja++;  } if (b2click == true) { b2click = false; label9.Text = ""; pozycja--;  } break; }
+                        case 7: { if (b1click == true) { b1click = false; ceny[pozycja] = Convert.ToDouble(textBox2.Text) * Convert.ToDouble(textBox4.Text); label11.Text = textBox1.Text + " - " + textBox2.Text; pozycja++; button1.Enabled = false; } if (b2click == true) { b2click = false; label10.Text = ""; pozycja--;  } break; }
                         case 8: { if (b2click == true) { b1click = false; b2click = false; label11.Text = ""; pozycja--; button1.Enabled = true; } break; }
                         default: { b1click = false; b2click = false; break; }
                     }
@@ -118,5 +124,6 @@ namespace KasaFiskalna
             }
             pozycja = 0;
         }
+
     }
 }
