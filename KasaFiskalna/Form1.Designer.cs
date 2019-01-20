@@ -120,7 +120,6 @@
             this.label2.Size = new System.Drawing.Size(45, 17);
             this.label2.TabIndex = 3;
             this.label2.Text = "Cena:";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // button2
             // 
@@ -141,7 +140,6 @@
             this.label1.Size = new System.Drawing.Size(128, 17);
             this.label1.TabIndex = 2;
             this.label1.Text = "Nazwa przedmiotu:";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // button1
             // 
@@ -159,7 +157,6 @@
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(210, 22);
             this.textBox2.TabIndex = 1;
-            this.textBox2.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             // 
             // textBox1
             // 
@@ -348,7 +345,6 @@
             this.MinimumSize = new System.Drawing.Size(522, 386);
             this.Name = "Form1";
             this.Text = "Kasa fiskalna";
-            this.Load += new System.EventHandler(this.Form1_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.groupBox1.ResumeLayout(false);
